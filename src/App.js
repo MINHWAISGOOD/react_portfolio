@@ -9,7 +9,7 @@ import Visual from './components/main/Visual';
 import Content from './components/main/Content';
 
 // sub
-import Department from './components/sub/Department';
+import About from './components/sub/About';
 import Community from './components/sub/Community';
 import Gallery from './components/sub/Gallery';
 import Youtube from './components/sub/Youtube';
@@ -36,7 +36,7 @@ function App() {
 				</Route>
 			</Switch>
 
-			<Route path='/department' component={Department} />
+			<Route path='/about' component={About} />
 
 			<Route path='/community' component={Community} />
 

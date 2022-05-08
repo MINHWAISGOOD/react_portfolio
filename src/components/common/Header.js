@@ -16,8 +16,8 @@ function Header(props) {
 
 				<div id='gnb'>
 					<li>
-						<NavLink activeStyle={active} to='/department'>
-							Department
+						<NavLink activeStyle={active} to='/about'>
+							About
 						</NavLink>
 					</li>
 					<li>

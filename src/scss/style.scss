@@ -6,13 +6,14 @@ $mp: 639px;
 @import 'common/header';
 @import 'common/footer';
 @import 'common/layout';
+@import 'common/popup';
 
 // main
 @import 'main/visual';
 @import 'main/content';
 
 // sub
-@import 'sub/department';
+@import 'sub/about';
 @import 'sub/community';
 @import 'sub/gallery';
 @import 'sub/youtube';

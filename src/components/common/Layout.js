@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 
+const path = process.env.PUBLIC_URL;
+
 function Layout(props) {
 	// useRef - document.querySelector 느낌
 	const frame = useRef(null);
@@ -17,10 +19,11 @@ function Layout(props) {
 
 	return (
 		<section className={`content ${props.name}`} ref={frame}>
-			<figure></figure>
+			<figure>
+				<img src={`${path}/img/banner.png`} />
+			</figure>
 			<div className='inner'>
 				<h1>{props.name}</h1>
-				{/* 해당 레이아웃 컴포넌트를 호출한 부모 컴포넌트의 자식 내용 출력 */}
 				{props.children}
 			</div>
 		</section>
