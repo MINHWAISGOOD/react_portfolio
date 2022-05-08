@@ -1,4 +1,4 @@
-.Youtube {
+.YOUTUBE {
 	&::after {
 		content: '';
 		display: block;
@@ -29,9 +29,6 @@
 				object-fit: cover;
 				filter: grayscale(0.5);
 				transition: 0.5s;
-				&:hover {
-					filter: grayscale(0);
-				}
 			}
 		}
 		h2 {
@@ -43,6 +40,12 @@
 			font: 14px/1.2 'arial';
 			color: #000;
 			margin-bottom: 10px;
+		}
+		&:hover img {
+			filter: grayscale(0);
+		}
+		&:hover {
+			border-bottom: 3px solid #000;
 		}
 	}
 }

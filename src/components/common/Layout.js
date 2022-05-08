@@ -20,12 +20,9 @@ function Layout(props) {
 	return (
 		<section className={`content ${props.name}`} ref={frame}>
 			<figure>
-				<img src={`${path}/img/banner.png`} />
-			</figure>
-			<div className='inner'>
 				<h1>{props.name}</h1>
-				{props.children}
-			</div>
+			</figure>
+			<div className='inner'>{props.children}</div>
 		</section>
 	);
 }

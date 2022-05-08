@@ -18,7 +18,7 @@ function About() {
 	}, []);
 
 	return (
-		<Layout name={'About'}>
+		<Layout name={'ABOUT'}>
 			<h2>B&O's Story</h2>
 			<hr />
 			<div className='story'>

@@ -1,0 +1,42 @@
+{
+  "members": [
+    {
+      "pic": "department_logo.jpg"
+    },
+    {
+      "name": "Mason",
+      "position": "CEO",
+      "pic": "member1.jpg"
+    },
+    {
+      "name": "Ethan",
+      "position": "Designer",
+      "pic": "member2.jpg"
+    },
+    {
+      "name": "Emily",
+      "position": "Designer",
+      "pic": "member3.jpg"
+    },
+    {
+      "name": "Jacob",
+      "position": "Engineer",
+      "pic": "member4.jpg"
+    },
+    {
+      "name": "Daniel",
+      "position": "Engineer",
+      "pic": "member5.jpg"
+    },
+    {
+      "name": "Olivia",
+      "position": "Marketer",
+      "pic": "member6.jpg"
+    },
+    {
+      "name": "Sara",
+      "position": "Marketer",
+      "pic": "member7.jpg"
+    }
+  ]
+}
