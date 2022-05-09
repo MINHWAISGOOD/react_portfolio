@@ -10,16 +10,6 @@
 			height: 100%;
 			object-fit: fill;
 		}
-		> h1 {
-			font: normal 60px/1 'arial';
-			color: #000;
-			text-align: center;
-			z-index: 10;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
 	}
 	> .inner {
 		width: 1180px;
@@ -28,7 +18,26 @@
 		position: relative;
 		opacity: 0;
 		transform: translateY(100px);
-		transition: 1s;
+		transition: opacity 1s, transform 1s;
+		h1 {
+			font: normal 70px/1 'arial';
+			color: #000;
+			margin-bottom: 50px;
+			text-align: left;
+			&::after {
+				content: '';
+				display: block;
+				width: 50%;
+				margin-top: 30px;
+				border: 2px solid #000;
+			}
+		}
+		> p {
+			font: 12px/1.2 'arial';
+			padding-right: 20%;
+			text-align: left;
+			margin-bottom: 200px;
+		}
 	}
 	&.on {
 		figure {

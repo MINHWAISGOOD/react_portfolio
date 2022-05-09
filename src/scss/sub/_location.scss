@@ -1,0 +1,40 @@
+.LOCATION {
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.branch {
+		width: 25%;
+		height: 400px;
+		float: left;
+		li {
+			cursor: pointer;
+			width: 100%;
+			height: 33%;
+			padding: 20px;
+			transition: 0.5s;
+			// border: 1px solid #000;
+			h2 {
+				font: bold 20px/1 'arial';
+				color: #000;
+			}
+			p {
+				font: 12px/1.2 'arial';
+				color: #000;
+				margin-top: 10px;
+			}
+			&.on h2,
+			&.on p {
+				color: tomato;
+			}
+		}
+	}
+	#map {
+		width: 75%;
+		height: 400px;
+		background: #000;
+		float: left;
+		margin-bottom: 200px;
+	}
+}

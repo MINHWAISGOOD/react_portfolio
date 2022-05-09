@@ -11,7 +11,7 @@ function Youtube() {
 
 	useEffect(() => {
 		const key = 'AIzaSyCYd9SWqo1_9ckWvx--2D68sG_il9hYTtM';
-		const playlistId = 'PLHtvRFLN5v-UVVpNfWqtgZ6YPs9ZJMWRK';
+		const playlistId = 'PLQ_1WY7bfG--Y-te-b8rQBy3N3i_3-G8r';
 		const num = 9;
 		const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
 
@@ -48,8 +48,8 @@ function Youtube() {
 								<img src={vid.snippet.thumbnails.standard.url} />
 							</div>
 
-							<h2>{tit.length > 25 ? tit.substr(0, 25) + '...' : tit}</h2>
-							<p>{desc.length > 100 ? desc.substr(0, 100) + '...' : desc}</p>
+							<h2>{tit.length > 30 ? tit.substr(0, 30) + '...' : tit}</h2>
+							<p>{desc.length > 200 ? desc.substr(0, 200) + '...' : desc}</p>
 						</article>
 					);
 				})}
