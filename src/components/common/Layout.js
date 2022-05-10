@@ -8,13 +8,8 @@ function Layout(props) {
 
 	useEffect(() => {
 		console.log(frame);
-		// 해당 컴포넌트가 생성시 (mount)
 		frame.current.classList.remove('on');
 		frame.current.classList.add('on');
-
-		// return () => {
-		// 	// unmount (cleanup 함수)
-		// };
 	}, []);
 
 	return (

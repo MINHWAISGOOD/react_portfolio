@@ -1,40 +1,98 @@
 .LOCATION {
+	h2 {
+		font: 20px/1 'arial';
+		color: #000;
+		padding-bottom: 10px;
+	}
 	&::after {
 		content: '';
 		display: block;
 		clear: both;
 	}
-	.branch {
-		width: 25%;
-		height: 400px;
-		float: left;
-		li {
-			cursor: pointer;
-			width: 100%;
-			height: 33%;
-			padding: 20px;
-			transition: 0.5s;
-			// border: 1px solid #000;
-			h2 {
-				font: bold 20px/1 'arial';
-				color: #000;
+	.wrap {
+		width: 100%;
+		article {
+			width: 280px;
+			height: 180px;
+			margin-right: 20px;
+			margin-top: 50px;
+			margin-bottom: 220px;
+			float: left;
+			// background: #fff;
+			position: relative;
+			&:last-child {
+				margin-right: 0;
 			}
-			p {
-				font: 12px/1.2 'arial';
-				color: #000;
-				margin-top: 10px;
+			.icon {
+				font-size: 50px;
+				position: absolute;
+				top: 10%;
+				left: 50%;
+				transform: translateX(-50%);
+				color: rgb(201, 180, 153);
 			}
-			&.on h2,
-			&.on p {
-				color: tomato;
+			.con {
+				width: 100%;
+				position: absolute;
+				top: 60%;
+				left: 50%;
+				transform: translateX(-50%);
+				h3 {
+					font: bold 20px/1 'arial';
+					color: #666;
+					margin-bottom: 20px;
+					text-align: center;
+				}
+				p {
+					font: 16px/1 'arial';
+					color: #666;
+					text-align: center;
+				}
 			}
 		}
 	}
 	#map {
-		width: 75%;
-		height: 400px;
+		width: 100%;
+		height: 500px;
 		background: #000;
-		float: left;
-		margin-bottom: 200px;
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}
+	button {
+		width: 150px;
+		height: 40px;
+		background: #fff;
+		border: none;
+		font: bold 15px/40px 'arial';
+		color: #fff;
+		background: rgb(201, 180, 153);
+		cursor: pointer;
+	}
+	.branch {
+		float: right;
+		text-align: center;
+		width: 40%;
+		li {
+			width: 32%;
+			height: 40px;
+			float: left;
+			margin-left: 2%;
+			background: #fff;
+			cursor: pointer;
+			transition: 0.5s;
+			> h2 {
+				font: bold 15px/40px 'arial';
+				color: #555;
+			}
+			&:nth-of-type(1) {
+				margin-left: 0;
+			}
+			&.on {
+				background: rgb(201, 180, 153);
+				h2 {
+					color: #fff;
+				}
+			}
+		}
 	}
 }

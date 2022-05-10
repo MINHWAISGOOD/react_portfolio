@@ -1,4 +1,5 @@
 .content {
+	background: #eee;
 	figure {
 		width: 100%;
 		height: 300px;
@@ -14,14 +15,15 @@
 	> .inner {
 		width: 1180px;
 		min-height: 400px;
-		margin: 100px auto;
+		margin: 100px auto 0;
+		padding-bottom: 200px;
 		position: relative;
 		opacity: 0;
 		transform: translateY(100px);
 		transition: opacity 1s, transform 1s;
 		h1 {
-			font: normal 70px/1 'arial';
-			color: #000;
+			font: normal 40px/1 'arial';
+			color: rgb(119, 110, 99);
 			margin-bottom: 50px;
 			text-align: left;
 			&::after {
@@ -29,11 +31,12 @@
 				display: block;
 				width: 50%;
 				margin-top: 30px;
-				border: 2px solid #000;
+				border: 2px solid rgb(119, 110, 99);
 			}
 		}
 		> p {
 			font: 12px/1.2 'arial';
+			color: rgb(119, 110, 99);
 			padding-right: 20%;
 			text-align: left;
 			margin-bottom: 200px;

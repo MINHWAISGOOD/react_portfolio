@@ -32,7 +32,6 @@ function Youtube() {
 				{vids.map((vid, idx) => {
 					const tit = vid.snippet.title;
 					const desc = vid.snippet.description;
-					const date = vid.snippet.publishedAt;
 
 					return (
 						<article
@@ -48,7 +47,7 @@ function Youtube() {
 								<img src={vid.snippet.thumbnails.standard.url} />
 							</div>
 
-							<h2>{tit.length > 30 ? tit.substr(0, 30) + '...' : tit}</h2>
+							<h2>{tit.length > 25 ? tit.substr(0, 25) + '...' : tit}</h2>
 							<p>{desc.length > 200 ? desc.substr(0, 200) + '...' : desc}</p>
 						</article>
 					);
