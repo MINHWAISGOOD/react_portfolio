@@ -5,11 +5,31 @@ function News() {
 		const data = localStorage.getItem('post');
 
 		const dummyPosts = [
-			{ title: 'Hello5', content: 'Here comes description in detail.' },
-			{ title: 'Hello4', content: 'Here comes description in detail.' },
-			{ title: 'Hello3', content: 'Here comes description in detail.' },
-			{ title: 'Hello2', content: 'Here comes description in detail.' },
-			{ title: 'Hello1', content: 'Here comes description in detail.' },
+			{
+				title: 'Lorem ipsum dolor sit amet consectetur adipisicing.',
+				content:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, animi.',
+			},
+			{
+				title:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus!',
+				content:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quibusdam harum repellat ut eum sunt.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet consectetur.',
+				content: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet.',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a non, officia cum porro at architecto dolor consequuntur suscipit incidunt!',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto commodi quas perspiciatis animi excepturi totam distinctio maxime voluptates.',
+			},
 		];
 
 		if (data) {
