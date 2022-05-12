@@ -102,9 +102,8 @@ function Location() {
 	}, [traffic]);
 
 	return (
-		<Layout name={'LOCATION'}>
+		<Layout name={'Location'} banner={'bn4.jpg'}>
 			<h2>Contact us</h2>
-			<hr />
 			<div className='wrap'>
 				<article>
 					<FontAwesomeIcon icon={faPhone} className='icon' />
@@ -156,7 +155,6 @@ function Location() {
 			<FontAwesomeIcon icon={faClock} className='icon' /> */}
 
 			<h2>Map</h2>
-			<hr />
 			<div id='map' ref={container}></div>
 
 			<button
@@ -170,7 +168,7 @@ function Location() {
 				{mapInfo.map((item, idx) => {
 					return (
 						<li key={idx} onClick={() => setIndex(idx)}>
-							<h2>{item.title}</h2>
+							<h3>{item.title}</h3>
 						</li>
 					);
 				})}

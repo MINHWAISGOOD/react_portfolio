@@ -14,19 +14,14 @@ function Layout(props) {
 
 	return (
 		<section className={`content ${props.name}`} ref={frame}>
-			<figure></figure>
+			<figure>
+				<img src={`${path}/img/${props.banner}`} alt='' />
+			</figure>
 			<div className='inner'>
 				<h1>{props.name}</h1>
 				<p>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-					molestias nam aut. Dolor earum, et repellat enim, ratione nulla libero
-					natus ipsam eius cum dolorem harum? Saepe consectetur totam harum.
-					<br />
-					<br />
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum placeat
-					quidem maxime assumenda nam deleniti eaque culpa fuga exercitationem
-					dolor, omnis velit fugit, quas architecto? Suscipit unde voluptatum
-					delectus ipsam.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+					necessitatibus, aperiam architecto repudiandae veniam consectetur?
 				</p>
 				{props.children}
 			</div>

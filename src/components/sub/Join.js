@@ -100,7 +100,7 @@ function Join() {
 	}, [err]);
 
 	return (
-		<Layout name={'JOIN'}>
+		<Layout name={'Join'} banner={'bn6.jpg'}>
 			<form onSubmit={handleSubmit}>
 				<fieldset>
 					<legend className='hidden'>회원가입 폼 양식</legend>

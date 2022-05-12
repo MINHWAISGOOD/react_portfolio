@@ -84,16 +84,16 @@ function Community() {
 	}, [posts]);
 
 	return (
-		<Layout name={'COMMUNITY'}>
+		<Layout name={'Community'} banner={'bn2.jpg'}>
 			<div className='inputBox'>
-				<h2>Please leave a comment</h2>
-				<input type='text' placeholder='제목을 입력하세요' ref={input} />
+				<h2>Please leave your comment</h2>
+				<input type='text' placeholder='Title' ref={input} />
 				<br />
 				<textarea
 					ref={textarea}
 					cols='30'
 					rows='10'
-					placeholder='본문을 입력하세요'></textarea>
+					placeholder='Content'></textarea>
 				<br />
 
 				<button onClick={resetPost}>CANCEL</button>
@@ -101,7 +101,6 @@ function Community() {
 			</div>
 
 			<div className='showBox'>
-				<h2>Comment List</h2>
 				{posts.map((post, idx) => {
 					return (
 						<article key={idx}>
@@ -109,6 +108,10 @@ function Community() {
 							{post.enableUpdate ? (
 								// 수정모드
 								<>
+									<div className='co_header'>comment</div>
+									<div className='num'>
+										{idx < 10 ? '0' + (idx + 1) : idx + 1}
+									</div>
 									<input
 										type='text'
 										defaultValue={post.title}
@@ -130,6 +133,10 @@ function Community() {
 							) : (
 								// 출력모드
 								<>
+									<div className='co_header'>comment</div>
+									<div className='num'>
+										{idx < 10 ? '0' + (idx + 1) : idx + 1}
+									</div>
 									<h3>{post.title}</h3>
 									<p>{post.content}</p>
 

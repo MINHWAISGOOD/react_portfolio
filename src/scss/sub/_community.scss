@@ -1,42 +1,40 @@
-.COMMUNITY {
-	&::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
+.Community {
 	.inputBox {
-		width: 40%;
-		border: 1px solid rgb(201, 180, 153);
-		padding: 30px;
+		width: 100%;
 		margin-bottom: 50px;
-		float: left;
 		position: relative;
-		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 		h2 {
-			font: 20px/35px 'arial';
+			font: 18px/35px 'arial';
 			color: #fff;
 			position: absolute;
-			top: 0;
+			top: -5px;
 			left: 0;
 			width: 100%;
 			height: 35px;
 			text-align: center;
-			background: rgb(201, 180, 153);
+			background: #777;
 		}
 		input[type='text'] {
+			margin-top: 20px;
 			margin-bottom: 10px;
 			width: 100%;
-			height: 30px;
+			height: 40px;
 			border: none;
 			margin-top: 30px;
-			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+			font: 16px/40px 'arial';
+		}
+		input[placeholder] {
+			padding: 0px 20px;
 		}
 		textarea {
 			width: 100%;
-			height: 250px;
+			height: 200px;
 			resize: none;
 			border: none;
-			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+			font: 16px/1.2 'arial';
+		}
+		textarea[placeholder] {
+			padding: 20px;
 		}
 		> button {
 			width: 48%;
@@ -46,39 +44,25 @@
 			font: 14px/1 'arial';
 			color: #fff;
 			border: none;
-			background: rgb(201, 180, 153);
-			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+			background: #333;
+			cursor: pointer;
+			transition: 0.5s;
 			&:last-child {
 				margin-right: 0;
+			}
+			&:hover {
+				background: orange;
 			}
 		}
 	}
 	.showBox {
-		width: 57%;
-		border: 1px solid rgb(201, 180, 153);
-		margin-left: 3%;
-		margin-bottom: 100px;
-		padding: 30px;
-		float: left;
-		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+		width: 100%;
+		margin-top: 100px;
+		margin-bottom: 50px;
 		position: relative;
-		h2 {
-			font: 20px/35px 'arial';
-			color: #fff;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 35px;
-			text-align: center;
-			background: rgb(201, 180, 153);
-		}
 		article {
 			background: #fff;
-			margin-top: 30px;
-			margin-bottom: 20px;
-			padding: 20px;
-			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+			padding: 40px 50px 20px;
 			position: relative;
 			&::after {
 				content: '';
@@ -86,48 +70,74 @@
 				clear: both;
 			}
 			input[type='text'] {
+				margin-top: 5px;
 				margin-bottom: 10px;
-				width: 80%;
+				width: 70%;
 				height: 30px;
-				// border: 1px solid rgb(201, 180, 153);
+				margin-left: 10%;
 			}
 			textarea {
-				width: 80%;
-				height: 120px;
+				width: 70%;
+				height: 70px;
+				margin-left: 10%;
 				resize: none;
-				// border: 1px solid rgb(201, 180, 153);
+			}
+			.co_header {
+				width: 100%;
+				height: 35px;
+				font: 18px/35px 'arial';
+				color: #fff;
+				background: #777;
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 0 50px;
+			}
+			.num {
+				width: 10%;
+				float: left;
+				font: bold 35px/75px 'arial';
+				text-align: center;
+				// border: 1px solid green;
 			}
 			h3 {
-				// border: 1px solid red;
-				width: 80%;
+				width: 70%;
+				margin-left: 10%;
 				height: 30px;
 				float: left;
 				font: bold 18px/30px 'arial';
 				color: #000;
-				margin-bottom: 5px;
+				margin-top: 5px;
+				margin-bottom: 10px;
+				text-align: center;
 			}
 			p {
-				// border: 1px solid blue;
-				width: 80%;
-				height: 50%;
+				width: 70%;
+				margin-left: 10%;
 				float: left;
 				font: 14px/1.2 'arial';
 				color: #000;
+				text-align: center;
 			}
 			.btns {
 				width: 20%;
 				position: absolute;
-				bottom: 10px;
+				top: 50%;
 				right: 10px;
 				text-align: right;
 				button {
 					margin-left: 5px;
-					width: 45px;
-					height: 20px;
+					width: 50px;
+					height: 30px;
 					border: none;
-					background: rgb(201, 180, 153);
+					background: #333;
 					font: 12px/20px 'arial';
 					color: #fff;
+					cursor: pointer;
+					transition: 0.5s;
+					&:hover {
+						background: orange;
+					}
 				}
 			}
 		}
