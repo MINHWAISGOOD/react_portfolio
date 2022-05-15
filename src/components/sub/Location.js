@@ -149,12 +149,8 @@ function Location() {
 					</div>
 				</article>
 			</div>
-			{/* <FontAwesomeIcon icon={faPhone} className='icon' />
-			<FontAwesomeIcon icon={faEnvelope} className='icon' />
-			<FontAwesomeIcon icon={faMapLocation} className='icon' />
-			<FontAwesomeIcon icon={faClock} className='icon' /> */}
 
-			<h2>Map</h2>
+			<h2>Visit us</h2>
 			<div id='map' ref={container}></div>
 
 			<button

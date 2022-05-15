@@ -10,7 +10,12 @@ $mp: 639px;
 
 // main
 @import 'main/visual';
+@import 'main/story';
+@import 'main/vids';
+@import 'main/pics';
+@import 'main/banner';
 @import 'main/news';
+@import 'main/btns';
 
 // sub
 @import 'sub/about';

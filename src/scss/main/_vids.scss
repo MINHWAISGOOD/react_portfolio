@@ -1,0 +1,53 @@
+#vids {
+	width: 1180px;
+	height: 50vh;
+	margin: 0 auto;
+	background: #fff;
+	overflow: hidden;
+	margin-top: 150px;
+	margin-bottom: 150px;
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	h2 {
+		width: 30%;
+		// border: 1px solid red;
+		font: bold 36px/1 'arial';
+		color: #000;
+		float: left;
+		margin-bottom: 100px;
+		margin-right: 10%;
+		&::after {
+			content: '';
+			display: block;
+			width: 70%;
+			margin-top: 15px;
+			border: 2px solid #000;
+		}
+	}
+	p {
+		// border: 1px solid red;
+		font: 16px/1.2 'arial';
+		color: #777;
+		float: left;
+		width: 60%;
+		text-align: right;
+	}
+	article {
+		width: 25%;
+		height: 230px;
+		cursor: pointer;
+		float: left;
+		.pic {
+			width: 100%;
+			height: 100%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}

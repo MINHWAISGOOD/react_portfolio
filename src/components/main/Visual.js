@@ -1,11 +1,9 @@
-import React from 'react';
-
 const path = process.env.PUBLIC_URL;
 
 function Visual() {
 	return (
-		<figure>
-			<img src={`${path}/img/1.jpg`} />
+		<figure className='myScroll on'>
+			<video src={`${path}/img/visual.mp4`} loop autoplay mute></video>
 		</figure>
 	);
 }

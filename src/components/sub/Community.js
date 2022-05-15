@@ -1,7 +1,9 @@
 import Layout from '../common/Layout';
 import { useRef, useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-// const path = process.env.PUBLIC_URL;
+const path = process.env.PUBLIC_URL;
 
 function Community() {
 	const input = useRef(null);
@@ -85,77 +87,123 @@ function Community() {
 
 	return (
 		<Layout name={'Community'} banner={'bn2.jpg'}>
-			<div className='inputBox'>
-				<h2>Please leave your comment</h2>
-				<input type='text' placeholder='Title' ref={input} />
-				<br />
-				<textarea
-					ref={textarea}
-					cols='30'
-					rows='10'
-					placeholder='Content'></textarea>
-				<br />
-
-				<button onClick={resetPost}>CANCEL</button>
-				<button onClick={createPost}>CREATE</button>
+			<div className='latestNews'>
+				<h2>Latest News</h2>
+				<div className='wrap'>
+					<article>
+						<div className='pic'>
+							<img src={`${path}/img/news1.jpg`} />
+						</div>
+						<p>
+							Bang & Olufsen today announced the launch of Beoplay EX, the
+							latest addition to its wearable audio portfolio. With astounding
+							sound, adaptive ANC and a fully waterproof design, Beoplay EX is
+							the most versatile true wireless earphone model from Bang &
+							Olufsen to date.
+						</p>
+						<FontAwesomeIcon icon={faArrowRight} className='icon' />
+					</article>
+					<article>
+						<div className='pic'>
+							<img src={`${path}/img/news2.jpg`} />
+						</div>
+						<p>
+							Bang & Olufsen continue to follow the tragic situation in Ukraine
+							very closely and our thoughts are with all the affected people in
+							Ukraine. We strongly oppose the Russian invasion, and we support
+							the sanctions imposed by the international community.
+						</p>
+						<FontAwesomeIcon icon={faArrowRight} className='icon' />
+					</article>
+					<article>
+						<div className='pic'>
+							<img src={`${path}/img/news3.jpg`} />
+						</div>
+						<p>
+							As Brand Ambassador, Wozniacki and her husband, former-NBA
+							All-Star David Lee, will work closely with the Danish luxury brand
+							as she transitions from her athletic career to more
+							lifestyle-focused pursuits, including projects such as custom
+							designing a new family home in Miami.
+						</p>
+						<FontAwesomeIcon icon={faArrowRight} className='icon' />
+					</article>
+				</div>
+				<button className='newsBtn'>READ MORE NEWS</button>
 			</div>
 
-			<div className='showBox'>
-				{posts.map((post, idx) => {
-					return (
-						<article key={idx}>
-							{/* {post.enableUpdate ? 수정모드 : 출력모드} */}
-							{post.enableUpdate ? (
-								// 수정모드
-								<>
-									<div className='co_header'>comment</div>
-									<div className='num'>
-										{idx < 10 ? '0' + (idx + 1) : idx + 1}
-									</div>
-									<input
-										type='text'
-										defaultValue={post.title}
-										ref={editInput}
-									/>
-									<br />
-									<textarea
-										cols='30'
-										rows='10'
-										defaultValue={post.content}
-										ref={editTextarea}></textarea>
+			<div className='Community_board'>
+				<h2>Community Board</h2>
+				<div className='inputBox'>
+					<h3>Please leave your comment</h3>
+					<input type='text' placeholder='Write a Title' ref={input} />
+					<br />
+					<textarea
+						ref={textarea}
+						cols='30'
+						rows='10'
+						placeholder='Wrtie your Comments'></textarea>
+					<br />
 
-									<div className='btns'>
-										<button onClick={() => disableUpdate(idx)}>cancel</button>
-										{/* 수정모드에서 저장버튼 클릭시 수정함수 호출 */}
-										<button onClick={() => updatePost(idx)}>save</button>
-									</div>
-								</>
-							) : (
-								// 출력모드
-								<>
-									<div className='co_header'>comment</div>
-									<div className='num'>
-										{idx < 10 ? '0' + (idx + 1) : idx + 1}
-									</div>
-									<h3>{post.title}</h3>
-									<p>{post.content}</p>
+					<button onClick={resetPost}>CANCEL</button>
+					<button onClick={createPost}>CREATE</button>
+				</div>
 
-									<div className='btns'>
-										{/* 수정 버튼 클릭시 enableUpdate 호출하면서 인수로 수정할 post 순번 전달 */}
-										<button
-											onClick={() => {
-												// allowed가 true 일때만 수정모드 변경 가능
-												if (allowed) enableUpdate(idx);
-											}}>
-											edit
-										</button>
-										<button onClick={() => deletePost(idx)}>delete</button>
-									</div>
-								</>
-							)}
-						</article>
-					);
-				})}
+				<div className='showBox'>
+					{posts.map((post, idx) => {
+						return (
+							<article key={idx}>
+								{/* {post.enableUpdate ? 수정모드 : 출력모드} */}
+								{post.enableUpdate ? (
+									// 수정모드
+									<>
+										<div className='num'>
+											{idx < 10 ? '0' + (idx + 1) : idx + 1}
+										</div>
+										<input
+											type='text'
+											defaultValue={post.title}
+											ref={editInput}
+										/>
+										<br />
+										<textarea
+											cols='30'
+											rows='10'
+											defaultValue={post.content}
+											ref={editTextarea}></textarea>
+
+										<div className='btns'>
+											<button onClick={() => disableUpdate(idx)}>cancel</button>
+											{/* 수정모드에서 저장버튼 클릭시 수정함수 호출 */}
+											<button onClick={() => updatePost(idx)}>save</button>
+										</div>
+									</>
+								) : (
+									// 출력모드
+									<>
+										<div className='num'>
+											{idx < 10 ? '0' + (idx + 1) : idx + 1}
+										</div>
+										<h3>{post.title}</h3>
+										<p>{post.content}</p>
+
+										<div className='btns'>
+											{/* 수정 버튼 클릭시 enableUpdate 호출하면서 인수로 수정할 post 순번 전달 */}
+											<button
+												onClick={() => {
+													// allowed가 true 일때만 수정모드 변경 가능
+													if (allowed) enableUpdate(idx);
+												}}>
+												edit
+											</button>
+											<button onClick={() => deletePost(idx)}>delete</button>
+										</div>
+									</>
+								)}
+							</article>
+						);
+					})}
+				</div>
 			</div>
 		</Layout>
 	);
