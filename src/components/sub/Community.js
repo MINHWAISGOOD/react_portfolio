@@ -108,10 +108,12 @@ function Community() {
 							<img src={`${path}/img/news2.jpg`} />
 						</div>
 						<p>
-							Bang & Olufsen continue to follow the tragic situation in Ukraine
-							very closely and our thoughts are with all the affected people in
-							Ukraine. We strongly oppose the Russian invasion, and we support
-							the sanctions imposed by the international community.
+							Williams Racing today announces a multi-year agreement with
+							renowned luxury audio company Bang & Olufsen as an Official Team
+							Partner. In addition to the Bang & Olufsen logo adorning the FW44,
+							Williams and Bang & Olufsen will work together to create
+							impactful, immersive and multi-sensory customer and fan
+							experiences.
 						</p>
 						<FontAwesomeIcon icon={faArrowRight} className='icon' />
 					</article>

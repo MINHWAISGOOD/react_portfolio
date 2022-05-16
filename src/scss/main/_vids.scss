@@ -11,42 +11,60 @@
 		display: block;
 		clear: both;
 	}
-	h2 {
-		width: 30%;
-		// border: 1px solid red;
-		font: bold 36px/1 'arial';
-		color: #000;
-		float: left;
-		margin-bottom: 100px;
-		margin-right: 10%;
+	.wrap {
+		width: 100%;
+		height: 100%;
+		position: relative;
 		&::after {
 			content: '';
 			display: block;
-			width: 70%;
-			margin-top: 15px;
-			border: 2px solid #000;
+			clear: both;
 		}
-	}
-	p {
-		// border: 1px solid red;
-		font: 16px/1.2 'arial';
-		color: #777;
-		float: left;
-		width: 60%;
-		text-align: right;
-	}
-	article {
-		width: 25%;
-		height: 230px;
-		cursor: pointer;
-		float: left;
-		.pic {
-			width: 100%;
-			height: 100%;
-			img {
+		h2 {
+			width: 30%;
+			font: bold 36px/1 'arial';
+			color: #000;
+			float: left;
+			margin-bottom: 100px;
+			margin-right: 10%;
+			position: absolute;
+			left: 0;
+			&::after {
+				content: '';
+				display: block;
+				width: 30%;
+				margin-top: 15px;
+				border: 2px solid #000;
+			}
+		}
+		p {
+			font: 16px/1.2 'arial';
+			position: absolute;
+			right: 0;
+			color: #777;
+			float: left;
+			width: 60%;
+			text-align: right;
+		}
+		article {
+			float: left;
+			width: 25%;
+			height: 200px;
+			margin-top: 15%;
+			cursor: pointer;
+			.pic {
 				width: 100%;
 				height: 100%;
-				object-fit: cover;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					transition: 0.5s;
+					&:hover {
+						filter: sepia(30%);
+						transform: scale(1.01);
+					}
+				}
 			}
 		}
 	}

@@ -1,48 +1,32 @@
 import Layout from '../common/Layout';
-import { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
-import Masonry from 'react-masonry-component';
 import Popup from '../common/Popup';
+import { useEffect, useState, useRef } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import Masonry from 'react-masonry-component';
+import * as types from '../../redux/actionType';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 function Gallery() {
+	const { gallery } = useSelector((store) => store.galleryReducer);
+	const dispatch = useDispatch();
 	const path = process.env.PUBLIC_URL;
 	const frame = useRef(null);
 	const input = useRef(null);
 	const pop = useRef(null);
-	const [items, setItems] = useState([]);
+
+	// const [items, setItems] = useState([]);
+	const [opt, setOpt] = useState({
+		type: 'user',
+		count: 100,
+		user: '195470813@N04',
+	});
 	const [loading, setLoading] = useState(true);
 	const [enableClick, setEnableClick] = useState(true);
 	const [index, setIndex] = useState(0);
 	const masonryOptions = { transitionDuration: '0.5s' };
 
-	const getFlickr = async (opt) => {
-		const key = 'e5fd58b463c908a06f45410943608f02';
-		const num = opt.count;
-		const method_interest = 'flickr.interestingness.getList';
-		const method_search = 'flickr.photos.search';
-		const method_user = 'flickr.people.getPhotos';
-		let url = '';
-
-		if (opt.type === 'interest') {
-			url = `https://www.flickr.com/services/rest/?method=${method_interest}&per_page=${num}&api_key=${key}&nojsoncallback=1&format=json`;
-		}
-		if (opt.type === 'search') {
-			url = `https://www.flickr.com/services/rest/?method=${method_search}&per_page=${num}&api_key=${key}&nojsoncallback=1&format=json&tags=${opt.tags}`;
-		}
-		if (opt.type === 'user') {
-			url = `https://www.flickr.com/services/rest/?method=${method_user}&per_page=${num}&api_key=${key}&nojsoncallback=1&format=json&user_id=${opt.user}`;
-		}
-
-		await axios.get(url).then((json) => {
-			if (json.data.photos.photo.length === 0) {
-				alert('해당 검색어의 이미지가 없습니다.');
-				return;
-			}
-			setItems(json.data.photos.photo);
-		});
-
+	const endLoading = () => {
 		setTimeout(() => {
 			frame.current.classList.add('on');
 			setLoading(false);
@@ -65,21 +49,21 @@ function Gallery() {
 			setLoading(true);
 			frame.current.classList.remove('on');
 
-			getFlickr({
+			setOpt({
 				type: 'search',
-				count: 50,
-				tags: result,
+				count: 100,
+				tag: result,
 			});
 		}
 	};
 
 	useEffect(() => {
-		getFlickr({
-			type: 'user',
-			count: 50,
-			user: '195470813@N04',
-		});
-	}, []);
+		dispatch({ type: types.GALLERY.start, opt });
+	}, [opt]);
+
+	useEffect(() => {
+		if (gallery.length !== 0) endLoading();
+	}, [gallery]);
 
 	return (
 		<>
@@ -118,7 +102,7 @@ function Gallery() {
 
 				<div className='frame' ref={frame}>
 					<Masonry elementType={'div'} options={masonryOptions}>
-						{items.map((item, idx) => {
+						{gallery.map((item, idx) => {
 							return (
 								<article
 									key={idx}
@@ -142,10 +126,10 @@ function Gallery() {
 			</Layout>
 
 			<Popup ref={pop}>
-				{items.length !== 0 ? (
+				{gallery.length !== 0 ? (
 					<>
 						<img
-							src={`https://live.staticflickr.com/${items[index].server}/${items[index].id}_${items[index].secret}_b.jpg`}
+							src={`https://live.staticflickr.com/${gallery[index].server}/${gallery[index].id}_${gallery[index].secret}_b.jpg`}
 						/>
 						<span className='close' onClick={() => pop.current.close()}>
 							close

@@ -8,8 +8,7 @@ function Banner() {
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum cumque
 					maiores commodi nemo minus, rem exercitationem, repellendus nesciunt,
-					quaerat libero iusto ex accusantium quibusdam ad laborum debitis et
-					doloremque? Laborum.
+					quaerat libero iusto ex accusantium quibusdam ad laborum debitis.
 				</p>
 			</div>
 			<div className='pic'>

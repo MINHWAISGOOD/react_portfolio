@@ -48,18 +48,37 @@ function News() {
 
 	return (
 		<section id='news' className='myScroll'>
-			<h1>Recent News</h1>
-			{/* posts값 중에서 최근글 3개까지만 화면에 출력 */}
-			{posts.map((post, idx) => {
-				if (idx < 3) {
-					return (
-						<li key={idx}>
-							<h2>{post.title}</h2>
-							<p>{post.content}</p>
-						</li>
-					);
-				}
-			})}
+			<div className='wrap'>
+				<h2>COMMUINTY</h2>
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab quaerat
+					exercitationem velit libero in odit eaque quisquam, dolore,
+					consectetur consequatur laborum minima rem fugiat repudiandae
+					obcaecati. Cumque sed alias repellat. Lorem ipsum dolor sit, amet
+					consectetur adipisicing elit.
+				</p>
+
+				{posts.map((post, idx) => {
+					if (idx < 4) {
+						return (
+							<article key={idx}>
+								<h3>
+									{post.title.length > 40
+										? post.title.substr(0, 40) + '...'
+										: post.title}
+								</h3>
+								<p>
+									{post.content.length > 200
+										? post.content.substr(0, 200) + '...'
+										: post.content}
+								</p>
+							</article>
+							// <h2>{tit.length > 25 ? tit.substr(0, 25) + '...' : tit}</h2>
+							// <p>{desc.length > 200 ? desc.substr(0, 200) + '...' : desc}</p>
+						);
+					}
+				})}
+			</div>
 		</section>
 	);
 }

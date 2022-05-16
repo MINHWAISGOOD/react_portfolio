@@ -1,4 +1,10 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay } from 'swiper';
+import 'swiper/css';
+
 const path = process.env.PUBLIC_URL;
+
+SwiperCore.use([Autoplay]);
 
 function Story() {
 	return (
@@ -6,28 +12,36 @@ function Story() {
 			<div className='story_head'>
 				<div className='wrap'>
 					<article>
-						<div className='pic'>
-							<img src={`${path}/img/story_speaker.jpg`} />
+						<div className='con'>
+							<div className='pic'>
+								<img src={`${path}/img/story_speaker.jpg`} />
+							</div>
+							<p>SPEAKER</p>
 						</div>
-						<p>SPEAKER</p>
 					</article>
 					<article>
-						<div className='pic'>
-							<img src={`${path}/img/story_headphone.jpg`} />
+						<div className='con'>
+							<div className='pic'>
+								<img src={`${path}/img/story_headphone.jpg`} />
+							</div>
+							<p>HEADPHONE</p>
 						</div>
-						<p>HEADPHONE</p>
 					</article>
 					<article>
-						<div className='pic'>
-							<img src={`${path}/img/story_tv.jpg`} />
+						<div className='con'>
+							<div className='pic'>
+								<img src={`${path}/img/story_tv.jpg`} />
+							</div>
+							<p>TV</p>
 						</div>
-						<p>TV</p>
 					</article>
 					<article>
-						<div className='pic'>
-							<img src={`${path}/img/story_acc.jpg`} />
+						<div className='con'>
+							<div className='pic'>
+								<img src={`${path}/img/story_acc.jpg`} />
+							</div>
+							<p>ACC</p>
 						</div>
-						<p>ACC</p>
 					</article>
 				</div>
 			</div>
@@ -52,9 +66,28 @@ function Story() {
 					<button>VIEW MORE</button>
 				</article>
 				<article>
-					<div className='pic'>
-						<img src={`${path}/img/designer.jpg`} />
-					</div>
+					<Swiper
+						spaceBetween={50}
+						slidesPerView={1}
+						loop={true}
+						autoplay={{ delay: 1500 }} // 추가
+					>
+						<SwiperSlide>
+							<div className='pic'>
+								<img src={`${path}/img/designer.jpg`} />
+							</div>
+						</SwiperSlide>
+						<SwiperSlide>
+							<div className='pic'>
+								<img src={`${path}/img/designer2.jpg`} />
+							</div>
+						</SwiperSlide>
+						<SwiperSlide>
+							<div className='pic'>
+								<img src={`${path}/img/design.jpg`} />
+							</div>
+						</SwiperSlide>
+					</Swiper>
 				</article>
 			</div>
 		</section>

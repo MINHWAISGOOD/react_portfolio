@@ -2,6 +2,8 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+const path = process.env.PUBLIC_URL;
+
 function Header(props) {
 	const active = { color: 'gray' };
 
@@ -10,7 +12,9 @@ function Header(props) {
 			<div className='inner'>
 				<h1>
 					<NavLink exact to='/'>
-						LOGO
+						<div className='pic'>
+							<img src={`${path}/img/logo.png`} />
+						</div>
 					</NavLink>
 				</h1>
 
