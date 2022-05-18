@@ -2,6 +2,8 @@ import { useSelector } from 'react-redux';
 import { useState, useRef } from 'react';
 import Popup from '../common/Popup';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function Pics() {
 	const pics = useSelector((store) => store.galleryReducer.gallery);
@@ -58,7 +60,7 @@ function Pics() {
 							src={`https://live.staticflickr.com/${pics[index].server}/${pics[index].id}_${pics[index].secret}_b.jpg`}
 						/>
 						<span className='close' onClick={() => pop.current.close()}>
-							close
+							<FontAwesomeIcon icon={faXmark} className='xmark' />
 						</span>
 					</>
 				)}

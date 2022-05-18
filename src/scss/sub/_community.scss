@@ -7,6 +7,7 @@
 			font: 35px/1 'arial';
 			color: #000;
 			text-align: center;
+			letter-spacing: 1px;
 			margin-bottom: 50px;
 		}
 		.wrap {
@@ -176,7 +177,7 @@
 				.num {
 					position: absolute;
 					top: 10px;
-					right: 10px;
+					right: 30px;
 					font: bold 25px/35px 'arial';
 					text-align: center;
 					color: #666;
@@ -194,8 +195,9 @@
 					text-align: center;
 				}
 				p {
-					width: 100%;
-					padding: 0 70px;
+					width: 80%;
+					padding: 10px 20px;
+					margin-left: 10%;
 					float: left;
 					font: 14px/1.2 'arial';
 					color: #666;
@@ -205,7 +207,7 @@
 					width: 20%;
 					position: absolute;
 					top: 70%;
-					right: 10px;
+					right: 30px;
 					text-align: right;
 					button {
 						margin-left: 5px;

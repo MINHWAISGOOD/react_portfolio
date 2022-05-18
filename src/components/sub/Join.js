@@ -2,6 +2,8 @@ import Layout from '../common/Layout';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
+const path = process.env.PUBLIC_URL;
+
 function Join() {
 	const history = useHistory();
 
@@ -144,86 +146,84 @@ function Join() {
 						<label for='agree'>I agree to the terms and conditions</label>
 					</div>
 
-					<h2>Input Information</h2>
-					<table border='1'>
-						<caption className='hidden'>회원가입 정보입력</caption>
-						<tbody>
-							{/* user id */}
-							<tr>
-								<th scope='row'>
-									<label htmlFor='userid'>USER ID</label>
-								</th>
-								<td>
-									<input
-										type='text'
-										id='userid'
-										name='userid'
-										placeholder='아이디를 입력하세요'
-										value={val.userid}
-										onChange={handleChange}
-									/>
-									<span className='err'>{err.userid}</span>
-								</td>
-							</tr>
+					<h2>Create Account</h2>
+					<div className='joinContent'>
+						<div className='joinImg'>
+							<img src={`${path}/img/joinImg.jpg`} />
+						</div>
+						<div className='joinForm'>
+							<div className='input_set'>
+								{/* user id */}
+								<label htmlFor='userid' className='form_title'>
+									USER ID
+								</label>
+								<br />
+								<input
+									type='text'
+									id='userid'
+									name='userid'
+									placeholder='아이디를 입력하세요'
+									value={val.userid}
+									onChange={handleChange}
+								/>
+								<div className='err'>{err.userid}</div>
+							</div>
 
 							{/* pwd1 */}
-							<tr>
-								<th scope='row'>
-									<label htmlFor='pwd1'>PASSWORD</label>
-								</th>
-								<td>
-									<input
-										type='password'
-										name='pwd1'
-										id='pwd1'
-										placeholder='비밀번호를 입력하세요'
-										value={val.pwd1}
-										onChange={handleChange}
-									/>
-									<span className='err'>{err.pwd1}</span>
-								</td>
-							</tr>
+							<div className='input_set'>
+								<label htmlFor='pwd1' className='form_title'>
+									PASSWORD
+								</label>
+								<br />
+								<input
+									type='password'
+									name='pwd1'
+									id='pwd1'
+									placeholder='비밀번호를 입력하세요'
+									value={val.pwd1}
+									onChange={handleChange}
+								/>
+								<div className='err'>{err.pwd1}</div>
+							</div>
 
 							{/* pwd2 */}
-							<tr>
-								<th scope='row'>
-									<label htmlFor='pwd2'>RE-PASSWORD</label>
-								</th>
-								<td>
-									<input
-										type='password'
-										name='pwd2'
-										id='pwd2'
-										placeholder='비밀번호를 재입력하세요'
-										value={val.pwd2}
-										onChange={handleChange}
-									/>
-									<span className='err'>{err.pwd2}</span>
-								</td>
-							</tr>
+							<div className='input_set'>
+								<label htmlFor='pwd2' className='form_title'>
+									RE-PASSWORD
+								</label>
+								<br />
+								<input
+									type='password'
+									name='pwd2'
+									id='pwd2'
+									placeholder='비밀번호를 재입력하세요'
+									value={val.pwd2}
+									onChange={handleChange}
+								/>
+								<div className='err'>{err.pwd2}</div>
+							</div>
 
 							{/* email */}
-							<tr>
-								<th scope='row'>
-									<label htmlFor='email'>E-MAIL</label>
-								</th>
-								<td>
-									<input
-										type='text'
-										id='email'
-										name='email'
-										placeholder='이메일주소를 입력하세요'
-										value={val.email}
-										onChange={handleChange}
-									/>
-									<span className='err'>{err.email}</span>
-								</td>
-							</tr>
+							<div className='input_set'>
+								<label htmlFor='email' className='form_title'>
+									E-MAIL
+								</label>
+								<br />
+								<input
+									type='text'
+									id='email'
+									name='email'
+									placeholder='이메일주소를 입력하세요'
+									value={val.email}
+									onChange={handleChange}
+								/>
+								<div className='err'>{err.email}</div>
+							</div>
 
 							{/* gender */}
-							<tr>
-								<th scope='row'>GENDER</th>
-								<td>
+							<div className='input_set2'>
+								<div className='form_title'>GENDER</div>
+								<div className='radio-checkbox'>
 									<input
 										type='radio'
 										id='male'
@@ -231,7 +231,6 @@ function Join() {
 										onChange={handleRadio}
 									/>
 									<label htmlFor='male'>Male</label>
-
 									<input
 										type='radio'
 										id='female'
@@ -239,14 +238,14 @@ function Join() {
 										onChange={handleRadio}
 									/>
 									<label htmlFor='female'>Female</label>
-									<span className='err'>{err.gender}</span>
-								</td>
-							</tr>
+								</div>
+								<div className='err'>{err.gender}</div>
+							</div>
 
 							{/* interests */}
-							<tr>
-								<th scope='row'>INTERESTS</th>
-								<td>
+							<div className='input_set2'>
+								<div className='form_title'>INTEREST</div>
+								<div className='radio-checkbox'>
 									<input
 										type='checkbox'
 										name='interests'
@@ -279,40 +278,47 @@ function Join() {
 									/>
 									<label htmlFor='acc'>Acc</label>
 
-									<span className='err'>{err.interests}</span>
-								</td>
-							</tr>
+									<input
+										type='checkbox'
+										name='interests'
+										id='etc'
+										onChange={handleCheck}
+									/>
+									<label htmlFor='etc' className='checkbox_btn'>
+										Etc
+									</label>
+								</div>
+
+								<div className='err'>{err.interests}</div>
+							</div>
 
 							{/* comments */}
-							<tr>
-								<th scope='row'>
-									<label htmlFor='comments'>COMMENTS</label>
-								</th>
-								<td>
-									<textarea
-										name='comments'
-										id='comments'
-										cols='30'
-										rows='10'
-										value={val.comments}
-										onChange={handleChange}></textarea>
-									<span className='err'>{err.comments}</span>
-								</td>
-							</tr>
-
-							{/* button set */}
-							<tr>
-								<th colSpan='2'>
-									<input type='reset' value='CANCEL' onClick={handleReset} />
-									<input
-										type='submit'
-										value='SEND'
-										onClick={() => setIsSubmit(true)}
-									/>
-								</th>
-							</tr>
-						</tbody>
-					</table>
+							<div className='input_set'>
+								<label htmlFor='comments' className='form_title'>
+									COMMENTS
+								</label>
+								<br />
+								<textarea
+									name='comments'
+									id='comments'
+									cols='30'
+									rows='10'
+									value={val.comments}
+									onChange={handleChange}></textarea>
+								<div className='err2'>{err.comments}</div>
+							</div>
+						</div>
+						<div className='joinBtn'>
+							<div className='btn_set'>
+								<input type='reset' value='CANCEL' onClick={handleReset} />
+								<input
+									type='submit'
+									value='SEND'
+									onClick={() => setIsSubmit(true)}
+								/>
+							</div>
+						</div>
+					</div>
 				</fieldset>
 			</form>
 		</Layout>

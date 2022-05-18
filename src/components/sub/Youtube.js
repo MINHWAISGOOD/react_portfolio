@@ -5,6 +5,7 @@ import Popup from '../common/Popup';
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function Youtube() {
 	const vidData = useSelector((store) => store.youtubeReducer.youtube);
@@ -28,7 +29,7 @@ function Youtube() {
 
 	return (
 		<>
-			<Layout name={'Youtube'}>
+			<Layout name={'Youtube'} banner={'bn5.jpg'}>
 				{vidData.map((vid, idx) => {
 					const tit = vid.snippet.title;
 					const desc = vid.snippet.description;
@@ -61,7 +62,7 @@ function Youtube() {
 							frameBorder='0'></iframe>
 						{/* Popup 컴포넌트의 함수를 이용해 팝업 닫기 */}
 						<span className='close' onClick={() => pop.current.close()}>
-							close
+							<FontAwesomeIcon icon={faXmark} className='xmark' />
 						</span>
 					</>
 				) : null}

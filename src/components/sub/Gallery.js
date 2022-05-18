@@ -6,6 +6,7 @@ import Masonry from 'react-masonry-component';
 import * as types from '../../redux/actionType';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function Gallery() {
 	const { gallery } = useSelector((store) => store.galleryReducer);
@@ -116,7 +117,7 @@ function Gallery() {
 												src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
 											/>
 										</div>
-										<h2>{item.title}</h2>
+										{/* <h2>{item.title}</h2> */}
 									</div>
 								</article>
 							);
@@ -132,7 +133,7 @@ function Gallery() {
 							src={`https://live.staticflickr.com/${gallery[index].server}/${gallery[index].id}_${gallery[index].secret}_b.jpg`}
 						/>
 						<span className='close' onClick={() => pop.current.close()}>
-							close
+							<FontAwesomeIcon icon={faXmark} className='xmark' />
 						</span>
 					</>
 				) : null}

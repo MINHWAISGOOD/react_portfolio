@@ -1,6 +1,8 @@
 import { useSelector } from 'react-redux';
 import { useState, useRef } from 'react';
 import Popup from '../common/Popup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function Vids() {
 	const vidData = useSelector((store) => store.youtubeReducer.youtube);
@@ -46,7 +48,7 @@ function Vids() {
 							src={`https://www.youtube.com/embed/${vidData[index].snippet.resourceId.videoId}`}
 							frameBorder='0'></iframe>
 						<span className='close' onClick={() => pop.current.close()}>
-							close
+							<FontAwesomeIcon icon={faXmark} className='xmark' />
 						</span>
 					</>
 				)}
