@@ -57,7 +57,7 @@ header {
 	}
 }
 
-// 태블릿
+// 반응형
 @media screen and (max-width: $tablet) {
 	header {
 		.inner {
@@ -70,6 +70,7 @@ header {
 			}
 			.menuMo {
 				display: block;
+				cursor: pointer;
 			}
 		}
 	}
@@ -77,4 +78,15 @@ header {
 
 // 모바일
 @media screen and (max-width: $mp) {
+	header {
+		.inner {
+			h1 {
+				top: 20px;
+				.pic {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+	}
 }

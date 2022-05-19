@@ -117,7 +117,6 @@ function Gallery() {
 												src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
 											/>
 										</div>
-										{/* <h2>{item.title}</h2> */}
 									</div>
 								</article>
 							);

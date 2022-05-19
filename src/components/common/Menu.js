@@ -28,7 +28,7 @@ const Menu = forwardRef((props, ref) => {
 					}}>
 					<h1>
 						<NavLink exact to='/'>
-							LOGO
+							B & O
 						</NavLink>
 					</h1>
 					<ul id='gnb'>

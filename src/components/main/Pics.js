@@ -5,7 +5,15 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
-function Pics() {
+function Pics(props) {
+	const scrolled = props.scrolled;
+	const start = props.start;
+	const base = 500;
+	const position = scrolled - start + base;
+	console.log(scrolled);
+	console.log(start);
+	console.log(position);
+
 	const pics = useSelector((store) => store.galleryReducer.gallery);
 	const [index, setIndex] = useState(0);
 	const pop = useRef(null);
@@ -13,6 +21,24 @@ function Pics() {
 	return (
 		<>
 			<section id='pics' className='myScroll'>
+				<div className='parallax'>
+					<h2
+						style={
+							position >= 0
+								? { transform: `translateX(-${position / 1.2}px)` }
+								: null
+						}>
+						BANG&OLUFSEN
+					</h2>
+					<p
+						style={
+							position >= 0
+								? { transform: `translateX(${position * 1.7}px)` }
+								: null
+						}>
+						EXHIBITION
+					</p>
+				</div>
 				<div className='inner'>
 					<div className='pics_main'>
 						<article>

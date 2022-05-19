@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Patua+One&family=Raleway&display=swap');
+
 nav {
 	width: 280px;
 	height: 100vh;
@@ -8,9 +10,42 @@ nav {
 	z-index: 5;
 	padding: 50px;
 	h1 {
-		margin-bottom: 50px;
+		margin-bottom: 70px;
+		> a {
+			font: bold 30px/1.2 'PT Sans Narrow', sans-serif;
+			color: #fff;
+			transition: 0.5s;
+			&:hover {
+				color: orange;
+			}
+		}
 	}
-	a {
-		color: #fff;
+	ul {
+		li {
+			margin-bottom: 40px;
+			a {
+				font: 20px/1.2 'Raleway', sans-serif;
+				color: #fff;
+				transition: 0.5s;
+				&:hover {
+					color: orange;
+				}
+			}
+		}
+	}
+}
+
+// 태블릿
+@media screen and (max-width: $tablet) {
+	nav {
+		width: 250px;
+		padding: 30px;
+	}
+}
+
+// 모바일
+@media screen and (max-width: $mp) {
+	nav {
+		width: 50%;
 	}
 }

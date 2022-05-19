@@ -65,3 +65,63 @@
 		}
 	}
 }
+
+// 태블릿
+@media screen and (max-width: $tablet) {
+	.Youtube {
+		article {
+			height: 300px;
+			&:last-child {
+				margin-bottom: 160px;
+			}
+			.pic {
+				height: 125px;
+				margin-bottom: 20px;
+				img {
+					filter: grayscale(0.3);
+				}
+			}
+			h2 {
+				font: bold 16px/1 'Raleway', sans-serif;
+				margin-bottom: 16px;
+			}
+			p {
+				font: 11px/1.2 'arial';
+			}
+			.icon {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+// 모바일
+@media screen and (max-width: $mp) {
+	.Youtube {
+		article {
+			width: 100%;
+			height: 270px;
+			margin-right: 0;
+			margin-bottom: 50px;
+			&:last-child {
+				margin-bottom: 100px;
+			}
+			.pic {
+				width: 100%;
+				height: 180px;
+				margin-bottom: 15px;
+			}
+			h2 {
+				font: bold 20px/1 'Raleway', sans-serif;
+				margin-bottom: 10px;
+			}
+			p {
+				display: none;
+			}
+			.icon {
+				font-size: 18px;
+				opacity: 1;
+			}
+		}
+	}
+}

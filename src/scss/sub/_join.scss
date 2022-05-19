@@ -128,7 +128,7 @@
 			}
 		}
 		.joinBtn {
-			width: 50%;
+			width: 60%;
 			height: 10%;
 			float: left;
 			position: relative;
@@ -152,6 +152,86 @@
 					}
 					&:hover {
 						background: orange;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 태블릿
+@media screen and (max-width: $tablet) {
+	.Join {
+		padding-bottom: 100px;
+		.joinContent {
+			.joinForm {
+				.input_set {
+					.form_title {
+						font: 10px/1 'arial';
+					}
+					.err {
+						font: 8px/1 'arial';
+					}
+					.err2 {
+						font: 8px/1 'arial';
+					}
+				}
+				.input_set2 {
+					.form_title {
+						font: 10px/1 'arial';
+					}
+					input[type='checkbox'] {
+						margin-left: 15px;
+						margin-right: 8px;
+					}
+				}
+			}
+			.joinBtn {
+				.btn_set {
+					input {
+						width: 80px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 모바일
+@media screen and (max-width: $mp) {
+	.Join {
+		h2 {
+			font: 25px/1 'Raleway', sans-serif;
+		}
+		#terms {
+			font: 13px/1.3 'arial';
+		}
+		.joinContent {
+			.joinImg {
+				width: 0;
+			}
+			.joinForm {
+				width: 100%;
+				.input_set {
+					.form_title {
+						font: 11px/1 'arial';
+					}
+				}
+				.input_set2 {
+					.form_title {
+						font: 11px/1 'arial';
+					}
+					input[type='checkbox'] {
+						margin-left: 5px;
+						margin-right: 5px;
+					}
+				}
+			}
+			.joinBtn {
+				width: 100%;
+				.btn_set {
+					input {
+						width: 80px;
 					}
 				}
 			}

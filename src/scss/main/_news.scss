@@ -55,26 +55,78 @@
 			margin-top: 15%;
 			cursor: pointer;
 			border: 1px solid #999;
+			background: #333;
 			padding: 30px;
 			transition: 0.5s;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			h3 {
 				font: bold 20px/1 'Raleway', sans-serif;
-				color: #333;
+				color: #fff;
 				margin-bottom: 20px;
 			}
 			p {
 				font: 14px/1.3 'Raleway', sans-serif;
-				color: #333;
+				color: #fff;
 			}
 			&:hover {
-				background: #333;
+				background: rgb(199, 134, 12);
 				h3 {
 					color: #fff;
 				}
 				p {
 					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+// 태블릿
+@media screen and (max-width: $tablet) {
+	#news {
+		padding: 30px;
+		width: 100%;
+		.wrap {
+			article {
+				margin-top: 20%;
+				h3 {
+					font: bold 18px/1 'Raleway', sans-serif;
+				}
+				p {
+					font: 12px/1.3 'Raleway', sans-serif;
+				}
+			}
+		}
+	}
+}
+
+// 모바일
+@media screen and (max-width: $mp) {
+	#news {
+		height: 150vh;
+		margin-bottom: 50px;
+		.wrap {
+			h2 {
+				&::after {
+					width: 50%;
+				}
+			}
+			> p {
+				display: none;
+			}
+			article {
+				width: 100%;
+				height: 15%;
+				margin-top: 20px;
+				&:nth-of-type(1) {
+					margin-top: 100px;
+				}
+				h3 {
+					font: bold 16px/1 'Raleway', sans-serif;
+				}
+				p {
+					font: 13px/1.3 'Raleway', sans-serif;
 				}
 			}
 		}

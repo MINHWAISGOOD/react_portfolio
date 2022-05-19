@@ -1,14 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Patua+One&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=PT+Sans+Narrow&family=Patua+One&family=Raleway&display=swap');
 
 #pics {
 	width: 100%;
-	padding: 200px 0;
+	padding: 250px 0;
 	background: #eee;
 	overflow: hidden;
 	&::after {
 		content: '';
 		display: block;
 		clear: both;
+	}
+	.parallax {
+		position: relative;
+		margin-bottom: 30px;
+		h2 {
+			font: bold 100px/1 'Caveat Brush', cursive;
+			color: rgba(0, 0, 0, 0.4);
+			letter-spacing: 7px;
+			position: absolute;
+			top: -150px;
+			right: 200px;
+		}
+		p {
+			font: 90px/1 'Caveat Brush', cursive;
+			color: rgba(0, 0, 0, 0.8);
+			margin-right: 100px;
+			letter-spacing: 7px;
+			position: absolute;
+			top: -100px;
+			left: 150px;
+		}
 	}
 	.inner {
 		width: 1180px;
@@ -83,6 +104,99 @@
 						&:hover {
 							filter: grayscale(0);
 							transform: scale(1.03);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 태블릿
+@media screen and (max-width: $tablet) {
+	#pics {
+		.parallax {
+			h2 {
+				display: none;
+			}
+			p {
+				display: none;
+			}
+		}
+		.inner {
+			width: 100%;
+			padding: 30px;
+			.pics_main {
+				width: 32%;
+				margin-right: 2%;
+				article {
+					padding: 80px 30px;
+					span {
+						font: bold 42px/1.3 'Raleway', sans-serif;
+					}
+					p {
+						font: 15px/1.3 'Raleway', sans-serif;
+					}
+				}
+			}
+			.pics_photos {
+				width: 66%;
+				article {
+					width: 48%;
+					&:nth-of-type(1) {
+						margin-right: 2%;
+					}
+					&:nth-of-type(3) {
+						margin-bottom: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 모바일
+@media screen and (max-width: $mp) {
+	#pics {
+		.inner {
+			.pics_main {
+				width: 100%;
+				height: 400px;
+				margin-right: 0;
+				margin-bottom: 20px;
+				article {
+					padding: 20px;
+					span {
+						font: bold 36px/1.3 'Raleway', sans-serif;
+						color: #333;
+					}
+					p {
+						font: 14px/1.3 'Raleway', sans-serif;
+					}
+				}
+			}
+			.pics_photos {
+				width: 100%;
+				height: 1200px;
+				article {
+					width: 100%;
+					height: 400px;
+					margin-bottom: 20px;
+					&:nth-of-type(1) {
+						margin-right: 0;
+					}
+					&:nth-of-type(3) {
+						margin-bottom: 0;
+						width: 100%;
+					}
+					.pic {
+						img {
+							filter: grayscale(0);
+							&:hover {
+								filter: grayscale(0);
+								transform: scale(1.01);
+							}
 						}
 					}
 				}

@@ -110,3 +110,89 @@
 		}
 	}
 }
+
+// 태블릿
+@media screen and (max-width: $tablet) {
+	.Location {
+		padding-bottom: 100px;
+		.wrap {
+			article {
+				width: 25%;
+				margin-right: 0;
+				.icon {
+					font-size: 32px;
+				}
+				.con {
+					h3 {
+						font: bold 17px/1 'Raleway', sans-serif;
+					}
+					p {
+						font: 14px/1 'Raleway', sans-serif;
+					}
+				}
+			}
+		}
+		#map {
+			height: 450px;
+		}
+		button {
+			width: 130px;
+			height: 35px;
+			font: bold 13px/35px 'Raleway', sans-serif;
+		}
+		.branch {
+			li {
+				width: 31%;
+				height: 35px;
+				margin-left: 3%;
+				h3 {
+					font: bold 13px/35px 'Raleway', sans-serif;
+				}
+			}
+		}
+	}
+}
+
+// 모바일
+@media screen and (max-width: $mp) {
+	.Location {
+		.wrap {
+			article {
+				width: 50%;
+				height: 150px;
+				margin-bottom: 50px;
+				&:last-child {
+					margin-bottom: 100px;
+				}
+				.icon {
+					font-size: 25px;
+				}
+				.con {
+					h3 {
+						font: bold 16px/1 'Raleway', sans-serif;
+					}
+					p {
+						font: 12px/1 'Raleway', sans-serif;
+					}
+				}
+			}
+		}
+		#map {
+			height: 350px;
+		}
+		button {
+			width: 100px;
+			height: 30px;
+			font: bold 12px/30px 'Raleway', sans-serif;
+		}
+		.branch {
+			width: 60%;
+			li {
+				height: 30px;
+				h3 {
+					font: bold 12px/30px 'Raleway', sans-serif;
+				}
+			}
+		}
+	}
+}

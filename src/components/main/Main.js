@@ -76,7 +76,7 @@ function Main() {
 			<Header type={'main'} />
 			<Visual />
 			<Story />
-			<Pics />
+			<Pics scrolled={scrolled} start={pos.current[2]} />
 			<Vids />
 			<Banner />
 			<News />

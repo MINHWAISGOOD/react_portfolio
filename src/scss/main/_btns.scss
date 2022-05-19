@@ -1,13 +1,12 @@
 .scroll_navi {
 	position: fixed;
 	top: 50%;
-	right: 30px;
+	right: 25px;
 	transform: translateY(-50%);
 	li {
-		width: 15px;
-		height: 15px;
-		background: #fff;
-		border: 1px solid #777;
+		width: 12px;
+		height: 12px;
+		background: #222;
 		border-radius: 10px;
 		margin-bottom: 20px;
 		cursor: pointer;
@@ -16,5 +15,12 @@
 			height: 100px;
 			background: #333;
 		}
+	}
+}
+
+// 태블릿
+@media screen and (max-width: $tablet) {
+	.scroll_navi {
+		display: none;
 	}
 }
