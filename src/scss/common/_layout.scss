@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Patua+One&family=Raleway&display=swap');
+
 .content {
 	// background: rgb(248, 246, 244);
 	background: #eee;
@@ -23,7 +25,7 @@
 		transform: translateY(100px);
 		transition: opacity 1s, transform 1s;
 		h1 {
-			font: normal 50px/1 'arial';
+			font: normal 50px/1 'PT Sans Narrow', sans-serif;
 			// color: rgb(119, 110, 99);
 			color: #000;
 			margin-bottom: 30px;

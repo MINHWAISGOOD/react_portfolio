@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Patua+One&family=Raleway&display=swap');
+
 .Youtube {
 	&::after {
 		content: '';
@@ -33,7 +35,7 @@
 			}
 		}
 		h2 {
-			font: bold 18px/1 'arial';
+			font: bold 20px/1 'Raleway', sans-serif;
 			color: #000;
 			text-align: center;
 			margin-bottom: 20px;
