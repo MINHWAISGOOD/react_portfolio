@@ -16,6 +16,16 @@
     .caching {
       width: 100%;
       height: 100vh;
+
+    }
+
+    .caching.off {
+      opacity: 0;
+    }
+
+    .caching img {
+      width: 200px;
+      height: 200px;
       position: fixed;
       top: 0px;
       left: 0px;
@@ -24,10 +34,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .caching.off {
-      opacity: 0;
     }
   </style>
 </head>
@@ -48,7 +54,7 @@
     let loadedImg = false;
     const lenVid = vids.length;
     const defaults = document.querySelector('.default');
-    const mask = document.querySelector('.mask');
+    const caching = document.querySelector('.caching');
     tags = '';
 
     //처음 index.html이 브라우저에 출력되자마자 일단은 로딩화면 뜨도록 설정
@@ -62,11 +68,11 @@
 
       if (result) {
         //로딩화면 페이드아웃 처리하고
-        mask.classList.add('off');
+        caching.classList.add('off');
 
         //페이드아웃 모션이 끝나면 DOM자체를 제거
         setTimeout(() => {
-          mask.remove();
+          caching.remove();
           defaults.remove();
         }, 2000);
       }
