@@ -7,7 +7,6 @@ function Layout(props) {
 	const frame = useRef(null);
 
 	useEffect(() => {
-		console.log(frame);
 		frame.current.classList.remove('on');
 		frame.current.classList.add('on');
 	}, []);

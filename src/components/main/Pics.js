@@ -10,9 +10,6 @@ function Pics(props) {
 	const start = props.start;
 	const base = 500;
 	const position = scrolled - start + base;
-	console.log(scrolled);
-	console.log(start);
-	console.log(position);
 
 	const pics = useSelector((store) => store.galleryReducer.gallery);
 	const [index, setIndex] = useState(0);

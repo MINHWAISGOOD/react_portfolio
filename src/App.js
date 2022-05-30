@@ -1,7 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-// import { setYoutube } from './redux/action';
 import * as types from './redux/actionType';
 
 // common
@@ -22,21 +21,8 @@ import Join from './components/sub/Join';
 // scss
 import './scss/style.scss';
 
-// const path = process.env.PUBLIC_URL;
-
 function App() {
 	const dispatch = useDispatch();
-
-	// const fetchYoutube = async () => {
-	// 	const key = 'AIzaSyCYd9SWqo1_9ckWvx--2D68sG_il9hYTtM';
-	// 	const playlistId = 'PLQ_1WY7bfG--Y-te-b8rQBy3N3i_3-G8r';
-	// 	const num = 9;
-	// 	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
-
-	// 	await axios.get(url).then((json) => {
-	// 		dispatch(setYoutube(json.data.items));
-	// 	});
-	// };
 
 	useEffect(() => {
 		dispatch({
@@ -54,17 +40,11 @@ function App() {
 			</Switch>
 
 			<Route path='/about' component={About} />
-
 			<Route path='/community' component={Community} />
-
 			<Route path='/gallery' component={Gallery} />
-
 			<Route path='/youtube' component={Youtube} />
-
 			<Route path='/location' component={Location} />
-
 			<Route path='/join' component={Join} />
-
 			<Footer />
 		</>
 	);

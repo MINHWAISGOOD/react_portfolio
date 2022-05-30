@@ -1,10 +1,3 @@
-// export const setYoutube = (data) => {
-// 	return {
-// 		type: 'SET_YOUTUBE',
-// 		payload: data,
-// 	};
-// };
-
 export const GALLERY = {
 	start: 'GALLERY_START',
 	success: 'GALLERY_SUCCESS',

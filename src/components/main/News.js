@@ -72,8 +72,6 @@ function News() {
 										: post.content}
 								</p>
 							</article>
-							// <h2>{tit.length > 25 ? tit.substr(0, 25) + '...' : tit}</h2>
-							// <p>{desc.length > 200 ? desc.substr(0, 200) + '...' : desc}</p>
 						);
 					}
 				})}

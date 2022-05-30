@@ -20,7 +20,6 @@ function Main() {
 	const [scrolled, setScrolled] = useState(0);
 
 	const getPos = () => {
-		console.log('getPos');
 		//getPos함수에 익명함수로 인수를 받지 않게 하기 위해 secs를 getPos함수 내부에서 구해줌
 		const secs = main.current.querySelectorAll('.myScroll');
 		pos.current = [];

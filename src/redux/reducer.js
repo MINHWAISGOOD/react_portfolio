@@ -1,20 +1,6 @@
 import { combineReducers } from 'redux';
 import * as types from './actionType';
 
-// const youtubeReducer = (state = { youtube: [] }, action) => {
-// 	switch (action.type) {
-// 		case 'SET_YOUTUBE':
-// 			return { ...state, youtube: action.payload };
-
-// 		default:
-// 			return state;
-// 	}
-// };
-
-// const reducers = combineReducers({
-// 	youtubeReducer,
-// });
-
 const galleryReducer = (state = { gallery: [] }, action) => {
 	switch (action.type) {
 		case types.GALLERY.start:
