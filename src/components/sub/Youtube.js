@@ -15,17 +15,17 @@ function Youtube() {
 	// const [vids, setVids] = useState([]);
 	const [index, setIndex] = useState(0);
 
-	// useEffect(() => {
-	// 	const key = 'AIzaSyCYd9SWqo1_9ckWvx--2D68sG_il9hYTtM';
-	// 	const playlistId = 'PLQ_1WY7bfG--Y-te-b8rQBy3N3i_3-G8r';
-	// 	const num = 9;
-	// 	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
+	useEffect(() => {
+		const key = 'AIzaSyCYd9SWqo1_9ckWvx--2D68sG_il9hYTtM';
+		const playlistId = 'PLQ_1WY7bfG--Y-te-b8rQBy3N3i_3-G8r';
+		const num = 9;
+		const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
 
-	// 	axios.get(url).then((json) => {
-	// 		console.log(json.data.items);
-	// 		setVids(json.data.items);
-	// 	});
-	// }, []);
+		axios.get(url).then((json) => {
+			console.log(json.data.items);
+			setVids(json.data.items);
+		});
+	}, []);
 
 	return (
 		<>
